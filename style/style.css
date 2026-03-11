@@ -201,7 +201,7 @@ transform: translateY(-6px) rotate(-45deg);
 
 .h_box_center{
     max-width: 28%;
-    float: right;
+    float: left;
     display: block;
     margin-right: 15px;
     margin-left: 15px;
@@ -220,7 +220,7 @@ transform: translateY(-6px) rotate(-45deg);
 
 .h_box_right{
     max-width: 28%;
-    float: right;
+    float: left;
     display: block;
     margin-right: 10px;
     background-color: white;
@@ -308,6 +308,12 @@ transform: translateY(-6px) rotate(-45deg);
     min-height: 155px;
 }
 
+.right_arcade_box::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .right_arcade_box p{
     font-size:0.8em;
     color: rgb(112, 111, 111);
@@ -334,4 +340,10 @@ transform: translateY(-6px) rotate(-45deg);
 }
 .footer p{
     font-size: small;
+}
+.footer {
+    clear: both; 
+    background-color: white;
+    margin-top: 15px;
+    padding: 10px;
 }
