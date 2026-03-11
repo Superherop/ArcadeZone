@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background: url(../images/bg-arcade.jpg) center no-repeat fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: 
+        "wdth" 100;
+
+}
+
+
+.container{
+    background-color: rgba(255, 255, 255, 0.9);
+   /* opacity: 80%; ezzel az a baj, hogy öröklődik és nem lehet visszacsinálni, minden egyes eleme átlátszó lesz, ezért a fenti megoldás*/
+    max-width: 100%;
+    width: 95%;
+    margin: 0  auto;  
+    border-radius: 5px;
+}
+
+/*=== HEADER and menu ===*/
+
+.header{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.header label span{
+    height: 1px;
+    background-color: black;
+    margin: 5px;
+    width: 20px;
+    display: block;
+
+}
+
+.header input{
+    display: none;
+}
+
+.header label{
+    
+    border-radius: 5px;
+    display: block;
+    float: right;
+    margin-right: 25px;
+    margin-top: -33px;
+}
+
+.header .logo{
+    display: block;
+    width: 95%;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.header .logo::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.header ul{
+    display: none;
+}
+
+.header li{
+    margin: 2px;
+    padding: 2px;
+}
+
+.header input:checked ~ ul{
+    display: block;
+}
+
+.header input:checked ~ label span:first-child{
+    transform: translateY(6px) rotate(45deg);
+    
+  }
+
+.header input:checked ~ label span:last-child{
+transform: translateY(-6px) rotate(-45deg);
+}
+
+.header input:checked ~ label span:nth-child(2){
+    opacity: 0;
+}
+
+/*=== Divider ===*/
+
+.empty_box{
+    height: 30px;
+}
+.empty_box_second{
+    height: 50px;
+}
+.empty_box_second h3{
+    padding: 10px;
+}
+
+/*=== main content ===*/
+.content{
+    border: 1px solid rgba(235, 233, 233, 0.804);
+    margin: 0 auto;
+    background-color: white;
+
+}
+.content .box{
+
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.content .box img{
+    max-width: 50%;
+    padding: 5px;
+    margin: 10px;
+    display: block;
+    float: left;
+    border-radius: 20px;
+}
+.content .box .text_context{
+    float: right;
+    max-width: 45%;
+    display: block;
+}
+.content .box .text_context h3{
+    padding: 10px;
+    font-weight: 900;
+}
+.content .box .text_context p{
+    color: black;
+    font-weight: 200;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+.content .box .text_context a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 400;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*==== Highlighted Block ===*/
+
+
+.content2{
+    border: 1px solid rgba(235, 233, 233, 0.804);
+    margin: 0 auto;
+    border-radius: 20px;
+
+}
+
+.h_box_left{
+    max-width: 30%;
+    float: left;
+    display: block;
+    background-color: white;
+  border-radius: 15px;
+    margin-left: 15px;
+    height: 400px;
+    padding: 10px;
+
+}
+
+#controller{
+    max-width: 90%;
+    border: solid 1px rgba(128, 128, 128, 0.394);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.h_box_center{
+    max-width: 30%;
+    float: right;
+    display: block;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    height: 400px;
+}
+
+
+#dice{
+    max-width: 100%;
+    border: solid 1px rgba(128, 128, 128, 0.394);
+    border-radius: 10px;
+}
+
+.h_box_right{
+    max-width: 30%;
+    float: right;
+    display: block;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    height: 400px;
+    margin-bottom: 10px;
+
+    }
+
+
+#cabinets{
+    max-width: 100%;
+    border: solid 1px rgba(128, 128, 128, 0.394);
+    border-radius: 10px;
+    
+
+}
+
+.highlighted_block::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.highlighted_block .text_context{
+    margin: 10px;
+}
+
+.highlighted_block p{
+    margin-top: 10px;
+}
+
+#next_button{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgba(128, 128, 128, 0.528);
+    color: white;
+    font-weight: 400;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.content2 hr{
+    border:none;
+    height: 1px;
+    background-color: rgba(13, 9, 9, 0.058);
+}
+
+.left_arcade_box{
+    margin: 10px 0px 10px 15px;
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    padding: 10px;
+    float:left;   
+    display: block; 
+    height: 155px;
+}
+
+.left_arcade_box p{
+    font-size:0.8em;
+    color: rgb(112, 111, 111);
+    margin: 8px 0px;
+}
+.left_arcade_box ul{
+    list-style: inside;
+    line-height: 1.5;
+    font-size: small;
+}
+
+.right_arcade_box{
+    margin: 10px 15px 10px 0px;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 40%;
+    padding: 10px;
+    float: right;
+    display: block;
+    height: 155px;
+}
+
+.right_arcade_box p{
+    font-size:0.8em;
+    color: rgb(112, 111, 111);
+    margin: 8px 0px;
+}
+.right_arcade_box .controller2 img{
+    max-width: 50%;
+    padding: 5px;
+    margin: 10px;
+    display: block;
+    float: right;
+    border-radius: 20px;
+}
+.third_section::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.footer{
+    background-color: white;
+    margin-top: 15px;
+
+    padding: 10px;
+}
+.footer p{
+    font-size: small;
+}
